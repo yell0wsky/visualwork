@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_example4.html</title>
+</head>
+<body>
+    <div>div1</div>
+    <div>div2</div>
+    <div>div3</div>
+    <div>div4</div>
+    <div>div5</div>
+    <div>div6</div>
+    <div>div7</div>
+    <div>div8</div>
+    <div>div9</div>
+    <div>div10</div>
+    <button class="button" id="changeBtn">바꾸기</button>
+    <button class="button" id="changeBtn2">바꾸기2</button>
+    <button class="button" id="changeBtn3">바꾸기3</button>
+    <script>
+        let index=0;
+        let divs=document.querySelectorAll("div");
+        let num=1
+        for(let i=0; i<document.querySelectorAll(".button").length; i++){
+            document.querySelectorAll(".button")[i].addEventListener("click",function(){
+                alert(num+"번째 출력입니다")
+                num=num+1
+               })
+               
+            }
+        document.querySelector("#changeBtn").addEventListener("click",function(){
+            if(index<10){
+                divs[index].innerText="황하늘";
+                index=index+1;
+                }});
+        
+        document.querySelector("#changeBtn2").addEventListener("click", function(){
+            if(index == 10){
+                return;
+            };
+            if(index<divs.length){
+                divs[index].innerText="배고파";
+                index=index+1;
+            }});
+        document.querySelector("#changeBtn3").addEventListener("click",function(){
+            if(index<divs.length){
+                divs[index].innerText="황하늘";
+                index=index+1;
+            }});
+
+    </script>
+</body>
+</html>

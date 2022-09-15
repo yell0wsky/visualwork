@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_example11.html</title>
+</head>
+<body>
+    <h3>가위 바위 보 게임</h3>
+    <select id="mySelect">
+        <option value="">나: 선택</option>
+        <option value="0">나: 가위</option>
+        <option value="1">나: 바위</option>
+        <option value="2">나: 보</option>
+    </select>
+    <strong>vs</strong>
+    <select id="comSelect">
+        <option value="">com: </option>
+        <option value="0">com: 가위</option>
+        <option value="1">com: 바위</option>
+        <option value="2">com: 보</option>
+    </select>
+    <p id="result">결과</p>
+    <script>
+        let my=document.querySelector("#mySelect");
+        let com=document.querySelector("#comSelect");
+        let result=document.querySelector("#result");
+        my.addEventListener("change", function(){
+            com.value=Math.floor(Math.random()*3);
+
+            if(my.value-com.value==-2||my.value-com.value==1){
+                result.innerText="이겼다";
+            }if(my.value-com.value==-1||my.value-com.value==2){
+                result.innerText="졌다";
+            }if(my.value-com.value==0){
+                result.innerText="비겼다";
+            };
+            
+            // if(my.value == 0){ //만일 내가 가위를 냈을때 
+            //     if(com.value == 0){
+            //         result.innerText="비겼다"
+            //     }else if(com.value == 1){
+            //         result.innerText="졌다";
+            //     }else if(com.value == 2){
+            //         result.innerText="이겼다";
+            //     }
+            // }else if(my.value == 1){ // 아니면 내가 바위를 냈을때
+            //     if(com.value == 0){
+            //         result.innerText="이겼다";
+            //     }else if(com.value == 1){
+            //         result.innerText="비겼다"
+            //     }else if(com.value == 2){
+            //         result.innerText="졌다";
+            //     }
+            // }else if(my.value == 2){ // 아니면 내가 보를 냈을때
+            //     if(com.value == 0){
+            //         result.innerText="졌다";
+            //     }else if(com.value == 1){
+            //         result.innerText="이겼다";
+            //     }else if(com.value == 2){
+            //         result.innerText="비겼다"
+            //     }
+            // }
+            // }
+        });
+    </script>
+</body>
+</html>

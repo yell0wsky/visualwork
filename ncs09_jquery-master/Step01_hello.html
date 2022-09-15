@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Step01_hello.html</title>
+</head>
+<body>
+<p>p1</p>
+<p class="my-class">p2</p>
+<p class="my-class">p3</p>
+<p class="my-class">p4</p>
+<p id="one">p5</p>
+<!-- jquery 로딩하기 -->
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+    
+    $("p").text("김구라");
+    // document.querySelector("p")[0].innerText="해골";
+    $("p")[0].innerText="해골";
+    $(".my-class").css("color","red");
+    $("#one").css("background-color","yellow");
+    
+
+    /*
+        1.jquery 를 로딩하고 $() 함수를 호출하면 배열이 리턴되는데
+            그 배열은 jquery의 기능이 추가된 배열이다.
+
+        2. $("선택자") 는 배열을 리턴하는데 해당 배열에는 선택자에 부합하는
+            모든 문서객체의 참조값이 순서대로 들어있다.
+
+        3. $("선택자").action() 형식으로 어떤 동작을 할수가 있는데
+            그 동작은 배열에 담긴 모든 문서객체에 일괄적으로 적용이 된다.
+
+        4. $("선택자").action().action2=().action() 와 같은 체인형태로
+        여러가지 동작을 순서대로 적용 시킬수도 있다.
+    */
+</script> 
+</body>
+</html>

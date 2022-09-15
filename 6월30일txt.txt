@@ -1,0 +1,28 @@
+<> 괄호 열고 닫는걸 markup이라고 한다.
+html은 마크업 언어
+
+visualstudio에서는 !를 입력하고 tap키를 누르면 html기본양식이 자동으로 작성된다.
+
+style 안의 내용이 CSS
+script 안의 내용이 JavaScript
+
+html에서 주석은 <!--내용-->
+CSS, Javascript 주석은 한줄일땐 //내용 , 여러줄일땐 /* 내용 */
+
+javascript에서 함수의 선언은
+
+function 함수이름(){
+	함수내용
+}
+
+의 형태로 이루어진다.
+
+
+h1처럼 좌우공간 전부를 차지하는 요소를 block element라 하고
+
+라인을 따라 옆으로 쌓이는 요소를 inline element라고 한다.
+
+
+span요소는 아무런 디자인적 영향을 주지 않지만 inline 요소 중 특정부분을 지정하기 위해 사용된다.
+
+label과 id는 일치시켜야한다.
